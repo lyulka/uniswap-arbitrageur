@@ -1,4 +1,4 @@
-# Arbitrage Contract (`arbitrage_contract`)
+# Arbitrage Contract (`ArbitrageContract.sol`)
 
 ## Setting up Hardhat
 
