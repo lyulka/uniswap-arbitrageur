@@ -17,21 +17,35 @@ This project is comprised of two components, each corresponding to a folder in t
 
 ### Solidity Environment Setup
 
-- Install Node.js and npm.
-- Install VSCode Solidity Extensions.
-- Install Hardhat.
-- More on how to set up Hardhat and how to check whether your installation is ready in the [arbitrage_contract README](./arbitrage_contract/README.md).
-- npm install dotenv.
+To develop and test the arbitrage smart contract, follow these steps:
 
-- Add `INFURA_API_KEY` and `PRIVATE_KEY` secrets in arbitrage_contract/.env file.
+1. **Install Node.js and npm**  
+   Required for running Hardhat and project dependencies.
 
-### Rust Environment Setup
+2. **Install VSCode Solidity Extensions**  
+   Recommended: [solidity by Juan Blanco](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for syntax highlighting and IntelliSense.
 
-- Install the Cargo toolchain.
-- Install the Rust Analyzer extension on VSCode.
+3. **Install Hardhat**  
+   Hardhat is the development environment used to compile, deploy, and test the Solidity contracts.
 
-### Integration
+   ```bash
+   npm install --save-dev hardhat
+   ```
 
-- Develop and test your Solidity contracts locally using Hardhat’s network or another local blockchain simulator.
-- Configure your Rust client to interact with the local blockchain via Ethereum JSON-RPC (e.g., using Hardhat’s default RPC URL).
-- Ensure that the two components communicate correctly by deploying the arbitrage contract and having the client submit test transactions.
+   For detailed setup and verification, see the [arbitrage_contract README](./arbitrage_contract/README.md).
+
+4. **Install dotenv**  
+   Used to manage environment secrets in development:
+
+   ```bash
+   npm install dotenv
+   ```
+
+5. **Configure environment secrets**  
+   Create a `.env` file inside the `arbitrage_contract` directory containing:
+
+   ```
+   INFURA_API_KEY=your_infura_key_here
+   ```
+
+Ensure that these are set before attempting to deploy or test contracts.
